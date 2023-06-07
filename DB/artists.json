@@ -1,0 +1,20 @@
+{
+    "artists": [
+        {
+            "name": "Iggy Pop, Artist",
+            "quote": "The friendship was basically that this guy salvaged me from certain professional and maybe personal annihilation — simple as that.",
+            "pic": "./img/db-s9-iggy.png"
+        },
+        {
+            "name": "Brian Eno, Artist",
+            "quote": "Some people say Bowie is all surface style and second-hand ideas, but that sounds like a definition of pop to me.",
+            "pic": "./img/db-s9-eno.png"
+        },
+        {
+            "name": "Tony Visconti, Music Producer",
+            "quote": " We are fortunate to have lived in the same time as him.",
+            "pic": "./img/db-s9-tony.png"
+        }
+        
+    ]
+}
