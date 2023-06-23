@@ -1,0 +1,17 @@
+.about {
+    h3 {
+        font-size:42px;
+    }
+
+    .sect {
+        
+        .sect_wrap {
+            width:100%;
+            padding: 0 40px;
+        }
+        &.sect9 {
+            color:#fff;
+            background:#000;
+        }
+    }
+}

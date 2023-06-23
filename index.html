@@ -13,29 +13,36 @@
     <main>
        
         <nav>
-                <h1 class="logo">
-                    <a href="#">
-                        <img src="img/db-logo.png" alt="db">
-                    </a>
-                </h1>
-                <ul class="nav">
-                    <li>ABOUT</li>
-                    <li>SOUND</li>
-                    <li>VISION</li>
-                </ul>
-                <a href="#" class="hamburger">
-                    <i class="fa-solid fa-bars"></i>
+            <h1 class="logo">
+                <a href="index.html#">
+                    <img src="img/db-logo.png" alt="db">
                 </a>
-            
+            </h1>
+            <ul class="nav">
+                <!-- <li>BOWIE IN BERLIN</li> -->
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./sound.html">SOUND</a></li>
+                <li><a href="./vision.html">VISION</a></li>
+                <li><a href="./video.html">VIDEO</a></li>
+                <li>&nbsp;</li>
+                <li>
+                    <a href="#" class="hamburger">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+           
         </nav>
-        <div class="sect sect1">
-            
-            <div class="sect_wrap">
+        <div class="sect sect1" style="background:black">
+            <video style="position:absolute;top:0;left:0;width:100%;opacity:0.7; height:100vh;object-fit:cover;z-index:0;" src="img/DJ.mp4" muted loop autoplay></video>
+            <div class="sect_wrap"style="background:black">
                 
-                <div class="contents">
-                    <h2>BOWIE IN BERLIN <span>1977 - 1979</span></h2>
-                    <p>
-                        consists of studio albums:<br>
+                <div class="contents" style="z-index:2;text-align:center;">
+                    <h2 style="">
+                        <p>1977 - 1979</p>
+                        BOWIE IN BERLIN <span></span></h2>
+                   <br>
+                       <p> consists of studio albums:<br>
                         Low(1977), "Heroes"(1977), Lodger(1979)
                     </p>
                 </div>
@@ -76,8 +83,7 @@
         </div>
         <div class="sect sect4">
             <div class="sect_wrap">
-                <h6>SOUND + VISION</h6>
-                <p>Bowie is "so profoundly revered", further describing them as "uncompromising and untethered artistic expressions with no commercial considerations limiting scope".</p>
+                <p class="sound" >SOUND + VISION &nbsp;SOUND + VISION</p>
             </div>
         </div>
         <div class="sect sect5">
@@ -110,23 +116,24 @@
                         <dd>Lodger<span>Mountain Studios in Montreux, Switzerland</span></dd>
                        
                     </dl>
-                    <img src="img/db-s5-01.jpg" alt="david 
+                    <img src="img/h1.jpg" alt="david 
                 bowie in berlin" class="his1">
-                    <img src="img/db-s5-02.jpg" alt="david bowie in berlin" class="his2">
-                    <img src="img/db-s5-03.jpg" alt="david bowie in berlin" class="his3">
+                    <img src="img/h2.jpg" alt="david bowie in berlin" class="his2">
+                    <img src="img/h3.jpg" alt="david bowie in berlin" class="his3">
                 </div>
                 
             </div>
         </div>
-        <div class="sect sect6">
+        <!-- <div class="sect sect6">
             <div class="sect_wrap">
                 <h6>INFLUENCED</h6>
                 <p>Artists inspired by "Heroes" include Andy McCluskey of Orchestral Manoeuvres in the Dark, who referred to the "unconscious influence" of Bowie on his singing style,[149] Vince Clarke, who called it a "rebellion inspiration",[150] Ian Astbury of the Cult[151] and Robyn Hitchcock.[152] John Lennon and U2 have also acknowledged the album's influence when making their records Double Fantasy (1980) and Achtung Baby (1991), respectively.[83][153] Scott Walker used "Heroes" as "the reference album" when making the Walker Brothers' Nite Flights (1978), according to engineer Steve Parker.</p>
             </div>
-        </div>
+        </div> -->
         <div class="sect sect7">
             <video src="img/heroes.mp4" muted loop autoplay></video>
             <div class="sect_wrap">
+                <h6 style="letter-spacing:0;">INFLUENCED</h6>
                 <h3>IGGY POP</h3>
                 <h3>BRIAN ENO</h3>
                 <h3>LOU REED</h3>
@@ -164,7 +171,7 @@ like a definition of pop to me.<br>
             <div class="sect_wrap">
                 <div class="motto">
                     <h6>HIS MOTTO</h6>
-                    <p>Tomorrow belongs to those who can here it coming.</p>
+                    <p>Tomorrow belongs to those <br>who can here it coming.</p>
                 </div>
                 <footer>
                     <p>COPYRIGHT (C) 2023 DAVID BOWIE ALL RIGHTS RESERVED.</p>
@@ -173,5 +180,25 @@ like a definition of pop to me.<br>
             </div>
         </div>
     </main>
+    <script>
+        const sec4 = document.querySelector('.sect4');
+        const baseline = -750;
+        const soundVision = document.querySelector('.sound');
+        console.log(sec4);
+
+        window.addEventListener('scroll', sec4_custom_scroll);
+        function sec4_custom_scroll() {
+        const scroll = window.scrollY;
+        
+
+        let scroll2 = (scroll - sec4.offsetTop - baseline)*2.2 ;
+        let scroll3 = scroll2 + 50
+        
+        if (scroll > sec4.offsetTop + baseline) {
+            soundVision.style.transform = `translateY(-50%) translateX(${-scroll2}px)`;
+        } else {
+        }
+    }
+    </script>
 </body>
 </html>

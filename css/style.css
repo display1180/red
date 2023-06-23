@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Condensed:wght@700&display=swap");
 * {
   margin: 0;
@@ -14,38 +15,10 @@ a {
   color: inherit;
 }
 
-body {
-  font-family: "Roboto Condensed", sans-serif;
-  overflow-x: hidden;
-}
-
-nav {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  line-height: 60px;
-  align-items: center;
-  position: fixed;
-  top: 20px;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1200px;
-  color: #fff;
-}
-nav ul {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-nav .sect_wrap {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .sect {
   letter-spacing: -0.02em;
   font-size: 16px;
+  color: #fff;
 }
 .sect h2 {
   font-size: 120px;
@@ -70,25 +43,30 @@ nav .sect_wrap {
   display: flex;
   justify-content: end;
   position: relative;
-  background: url(../img/db-s1-bg.jpg) no-repeat center/cover;
+  background: black;
   color: #fff;
 }
 .sect.sect1 .sect_wrap {
-  width: 1200px;
+  width: 100%;
+  padding-left: 40px;
+  max-width: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 }
 .sect.sect1 .sect_wrap h2 {
   letter-spacing: 0;
+  font-size: 82px;
 }
 .sect.sect1 .sect_wrap p {
-  font-size: 42px;
+  font-size: 24px;
 }
 .sect.sect2 {
   padding: 180px;
   height: 100vh;
+  background: #ff6c00;
+  color: #000;
 }
 .sect.sect2 .sect_wrap {
   width: 1000px;
@@ -99,6 +77,7 @@ nav .sect_wrap {
 .sect.sect3 {
   font-size: 72px;
   min-height: 100vh;
+  padding-top: 100px;
   margin-bottom: 180px;
 }
 .sect.sect3 .row {
@@ -128,10 +107,26 @@ nav .sect_wrap {
   height: 100vh;
   background: #ff6c00;
   padding: 180px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #000;
+}
+.sect.sect4 .sound {
+  font-size: 24vw;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0059ff;
 }
 .sect.sect5 {
   display: flex;
   padding: 180px 0;
+  background: #fff;
+  color: #000;
 }
 .sect.sect5 .sect_wrap {
   position: relative;
@@ -179,7 +174,7 @@ nav .sect_wrap {
 }
 .sect.sect6 {
   text-align: center;
-  padding-bottom: 180px;
+  padding: 180px 0;
 }
 .sect.sect6 p {
   font-size: 42px;
@@ -213,6 +208,8 @@ nav .sect_wrap {
 .sect.sect8 {
   padding-top: 180px;
   padding-bottom: 180px;
+  background: #fff;
+  color: #000;
 }
 .sect.sect8 .row {
   padding-top: 30px;
@@ -230,8 +227,14 @@ nav .sect_wrap {
   font-size: 24px;
   padding-top: 60px;
 }
+.sect.sect9 {
+  background: #fff;
+  color: #000;
+}
 .sect.sect9 .sect_wrap {
   width: 100%;
+  max-width: 100%;
+  padding: 0 40px;
 }
 .sect.sect9 .motto {
   padding: 100px 60px;
@@ -418,6 +421,418 @@ nav .sect_wrap {
   }
   .sect.sect9 .sect_wrap footer a {
     font-size: 12px;
+  }
+}
+.sub .sect h2 {
+  max-width: 1200px;
+  margin: 200px 40px;
+  letter-spacing: -0.03em;
+}
+.sub .sect .sect_wrap {
+  max-width: none;
+}
+
+@media screen and (max-width: 1180px) {
+  h2 {
+    padding-left: 2rem;
+  }
+}
+.pop {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0px;
+  padding: 100px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.pop.on {
+  opacity: 1;
+}
+.pop .con {
+  width: 100%;
+  height: 100%;
+}
+.pop .con iframe,
+.pop .con video,
+.pop .con img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+.pop .con img {
+  object-fit: contain;
+}
+.pop .close {
+  font: bold 14px/1 "arial";
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.video .sect h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.video .container {
+  padding-top: 200px;
+  overflow-y: hidden;
+  height: 400px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.video .container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.video .block {
+  position: relative;
+  width: 550px;
+  height: 360px;
+  margin: 0 40px 0 40px;
+  cursor: pointer;
+}
+.video .block img {
+  width: 100%;
+}
+.video .sect9 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  background: #000;
+}
+
+@media screen and (max-width: 1180px) {
+  .video .wrap article h2 {
+    font-size: 28px;
+  }
+  .video .wrap article .txt {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .video .wrap article .pic {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .video .wrap article .pic img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .video .wrap .video-item {
+    flex-direction: column;
+  }
+  .video .wrap .video-item h2 {
+    width: 100%;
+    font-size: 20px;
+    padding-right: 0px;
+  }
+  .video .wrap .video-item .txt {
+    width: 100%;
+  }
+  .video .wrap .video-item .pic {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+html {
+  overflow-y: scroll;
+}
+
+.vision {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.vision .searchBox {
+  width: 100%;
+  padding: 50px 40px 20px;
+  font-size: 0;
+}
+.vision .searchBox input {
+  width: 260px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+}
+.vision .searchBox .btnSearch {
+  width: 80px;
+  height: 29px;
+  margin-left: 40px;
+  background: #333;
+  color: #fff;
+  font: bold 12px/29px "arial";
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  transform: translateY(-1px);
+}
+.vision .btnSet {
+  padding: 0 40px;
+}
+.vision .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: 1s;
+}
+.vision .loading.off {
+  opacity: 0;
+}
+.vision .wrap {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
+  margin: 30px;
+}
+.vision .wrap.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.vision .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.vision .wrap li {
+  width: 25%;
+  float: left;
+  padding: 10px;
+}
+.vision .wrap li > div {
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+}
+.vision .wrap li > div img {
+  width: 100%;
+}
+.vision .wrap li > div .profile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0;
+  margin-right: 0;
+}
+.vision .wrap li > div .profile img {
+  width: 36px;
+}
+.vision .wrap li > div .profile span {
+  display: inline-block;
+  font: 12px/1;
+  margin-left: 5px;
+}
+.vision .wrap li > div p {
+  font: 18px/1.2 "Architects daughter";
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.vision .sect.sect9 .sect_wrap {
+  color: #fff;
+  background: #000;
+}
+
+@media screen and (max-width: 1180px) {
+  .vision .wrap li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .vision .wrap li {
+    width: 100%;
+  }
+}
+.about h3 {
+  font-size: 42px;
+}
+.about .sect .sect_wrap {
+  width: 100%;
+  padding: 0 40px;
+}
+.about .sect.sect9 {
+  color: #fff;
+  background: #000;
+}
+
+.sound {
+  overflow-y: hidden;
+}
+.sound .cover-bg {
+  width: 100vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(20px);
+  opacity: 0.3;
+}
+.sound #sound {
+  display: flex;
+  height: 100vh;
+}
+.sound #sound .ui {
+  height: 100vh;
+  position: relative;
+}
+.sound #sound .ui.left {
+  width: 94vh;
+  padding: 100px 40px 40px 40px;
+}
+.sound #sound .ui.left img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+}
+.sound #sound .ui.left a {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  color: #fff;
+}
+.sound #sound .ui.left a i {
+  padding-right: 10px;
+}
+.sound #sound .ui.right {
+  padding: 200px 0 60px 0;
+  max-height: 100vh;
+  width: calc(100% - 94vh);
+  display: flex;
+}
+.sound #sound .ui.right h3 {
+  font-size: 52px;
+  padding-bottom: 71px;
+  opacity: 0.15;
+}
+.sound #sound .ui.right h3.active {
+  opacity: 1;
+}
+.sound #sound .ui.right h6 {
+  padding-left: 80px;
+}
+.sound #sound .ui.right .title {
+  height: 700px;
+}
+.sound #sound .ui.right .list {
+  width: 100%;
+  padding-right: 40px;
+  margin-right: 40px;
+}
+.sound #sound .ui.right .list ul {
+  width: calc(100% - 40px);
+  height: 485px;
+  overflow-y: scroll;
+  margin-right: 40px;
+  margin-left: 80px;
+  border-bottom: 1px solid #333;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.sound #sound .ui.right .list ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.sound #sound .ui.right .list ul li {
+  line-height: 60px;
+  border-bottom: 1px solid #333;
+  padding-left: 40px;
+}
+.sound #sound .ui.right .list ul li:last-child {
+  border-bottom: none;
+}
+.sound #sound .ui.right .list ul li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sound #sound .ui.right .list ul li a > * {
+  flex: 1;
+}
+.sound #sound .ui.right .list ul li a > .songName {
+  flex: 5;
+}
+.sound #sound .ui.right .play {
+  padding-left: 100px;
+  line-height: 60px;
+  padding-top: 20px;
+}
+.sound #sound .ui.right .play .label {
+  display: flex;
+  justify-content: space-between;
+}
+.sound #sound .ui.right .play .label .left {
+  flex: 4;
+}
+.sound #sound .ui.right .play .label .left span {
+  padding-right: 50px;
+}
+.sound #sound .ui.right .play .label .right {
+  flex: 1;
+}
+.sound #sound .ui.right .play .player .left {
+  display: flex;
+  gap: 20px;
+}
+.sound #sound .ui.right .play .player .left .fa-forward-step {
+  transform: translateX(-2px);
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  overflow-x: hidden;
+  background: #000;
+}
+body.sub nav {
+  color: #fff;
+}
+
+nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  line-height: 60px;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 9;
+  padding: 0 40px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+nav .sect_wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+nav a {
+  max-width: 60px;
+}
+nav a img {
+  width: 80px;
+  padding-top: 15px;
+}
+
+@media (max-width: 639px) {
+  nav ul {
+    display: none;
   }
 }
 
