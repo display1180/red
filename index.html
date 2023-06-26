@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +10,9 @@
     <script src="https://kit.fontawesome.com/c98356d100.js" crossorigin="anonymous"></script>
     <script defer src="js/main.js"></script>
 </head>
+
 <body>
     <main>
-       
         <nav>
             <h1 class="logo">
                 <a href="index.html#">
@@ -31,33 +32,35 @@
                     </a>
                 </li>
             </ul>
-           
         </nav>
         <div class="sect sect1" style="background:black">
-            <video style="position:absolute;top:0;left:0;width:100%;opacity:0.7; height:100vh;object-fit:cover;z-index:0;" src="img/DJ.mp4" muted loop autoplay></video>
-            <div class="sect_wrap"style="background:black">
-                
+            <video
+                style="position:absolute;top:0;left:0;width:100%;opacity:0.7; height:100vh;object-fit:cover;z-index:0;"
+                src="img/DJ.mp4" muted loop autoplay></video>
+            <div class="sect_wrap" style="background:black">
+
                 <div class="contents" style="z-index:2;text-align:center;">
                     <h2 style="">
                         <p>1977 - 1979</p>
-                        BOWIE IN BERLIN <span></span></h2>
-                   <br>
-                       <p> consists of studio albums:<br>
+                        BOWIE IN BERLIN <span></span>
+                    </h2>
+                    <br>
+                    <p> consists of studio albums:<br>
                         Low(1977), "Heroes"(1977), Lodger(1979)
                     </p>
                 </div>
-                
-            </div>            
+
+            </div>
         </div>
         <div class="sect sect2">
             <div class="sect_wrap">
                 <h6>ABOUT</h6>
-                <p>The trilogy originated following Bowie's move from 
-                    Los Angeles to Europe with American singer Iggy Pop 
-                    to rid themselves of worsening drug addiction. 
-                    Influences included the German krautrock scene and 
+                <p>The trilogy originated following Bowie's move from
+                    Los Angeles to Europe with American singer Iggy Pop
+                    to rid themselves of worsening drug addiction.
+                    Influences included the German krautrock scene and
                     the recent ambient releases of Eno.
-                    </p>
+                </p>
             </div>
         </div>
         <div class="sect sect3">
@@ -83,25 +86,27 @@
         </div>
         <div class="sect sect4">
             <div class="sect_wrap">
-                <p class="sound" >SOUND + VISION &nbsp;SOUND + VISION</p>
+                <p class="sound">SOUND + VISION &nbsp;SOUND + VISION</p>
             </div>
         </div>
         <div class="sect sect5">
             <div class="sect_wrap">
-                
-                
-                
+
+
+
                 <div class="history">
                     <h6>HISTORY</h6>
                     <dl>
                         <dt>1976</dt>
                         <dd>Came to Berlin
-                            <span>to rejuvenile his mind</span></dd>
+                            <span>to rejuvenile his mind</span>
+                        </dd>
                     </dl>
                     <dl>
                         <dt>1977</dt>
                         <dd>Low
-                            <span>Château d'Hérouville</span></dd>
+                            <span>Château d'Hérouville</span>
+                        </dd>
                     </dl>
                     <dl>
                         <dt>1977</dt>
@@ -114,14 +119,14 @@
                     <dl>
                         <dt>1979</dt>
                         <dd>Lodger<span>Mountain Studios in Montreux, Switzerland</span></dd>
-                       
+
                     </dl>
                     <img src="img/h1.jpg" alt="david 
                 bowie in berlin" class="his1">
                     <img src="img/h2.jpg" alt="david bowie in berlin" class="his2">
                     <img src="img/h3.jpg" alt="david bowie in berlin" class="his3">
                 </div>
-                
+
             </div>
         </div>
         <!-- <div class="sect sect6">
@@ -188,17 +193,15 @@ like a definition of pop to me.<br>
 
         window.addEventListener('scroll', sec4_custom_scroll);
         function sec4_custom_scroll() {
-        const scroll = window.scrollY;
-        
-
-        let scroll2 = (scroll - sec4.offsetTop - baseline)*2.2 ;
-        let scroll3 = scroll2 + 50
-        
-        if (scroll > sec4.offsetTop + baseline) {
-            soundVision.style.transform = `translateY(-50%) translateX(${-scroll2}px)`;
-        } else {
+            const scroll = window.scrollY;
+            let scroll2 = (scroll - sec4.offsetTop - baseline) * 2.2;
+            let scroll3 = scroll2 + 50
+            if (scroll > sec4.offsetTop + baseline) {
+                soundVision.style.transform = `translateY(-50%) translateX(${-scroll2}px)`;
+            } else {
+            }
         }
-    }
     </script>
 </body>
+
 </html>
