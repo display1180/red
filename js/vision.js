@@ -90,3 +90,26 @@ function isoLayout() {
 	wrap.classList.add('on');
 	loading.classList.add('off');
 }
+
+
+
+/*
+
+secs.forEach((_), idx) => {
+	if (scroll >= secs[idx].offsetTop + baseline) {
+		for (const el of btns) el.classList.remove('on');
+		btns[idx].classList.add('on');
+		secs[idx].classList.add('on');
+	}
+}
+
+function moveScroll(idx) {
+	enableEvent = false;
+	new Anime(window, {
+		prop: 'scroll',
+		value: secs[idx].offsetTop,
+		duration: speed,
+		callback : () => (enableEvent = true),
+	});
+}
+*/

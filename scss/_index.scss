@@ -5,6 +5,7 @@ $mobile: 639px;
 .sect {
     letter-spacing:-0.02em;
     font-size: 16px;
+    color:#fff;
     h2 {
         font-size: 120px;
         letter-spacing:-0.08em;
@@ -35,22 +36,28 @@ $mobile: 639px;
        
         color:#fff;
         .sect_wrap {
-            width:1200px;
+            width:100%;
+            padding-left:40px;
+            max-width:none;
             display:flex;
+            
             flex-direction:column;
             justify-content:flex-end;
-            padding-bottom: 100px;
+            padding-bottom: 40px;
             h2 {
                 letter-spacing:0;
+                font-size: 82px;
             }
             p {
-                font-size:42px;
+                font-size:24px;
             }
         }
     }
     &.sect2 {
         padding: 180px;
         height:100vh;
+        background:$point;
+        color:#000;
 
         .sect_wrap {
             width:1000px;
@@ -63,6 +70,7 @@ $mobile: 639px;
     &.sect3 {
         font-size: 72px ;
         min-height:100vh;
+        padding-top:100px;
         margin-bottom:180px;
 
         .row {
@@ -100,6 +108,8 @@ $mobile: 639px;
        justify-content:center;
        align-items:center;
        position:relative;
+       background:#000;
+
        
        .sound {
         font-size: 24vw;
@@ -108,13 +118,15 @@ $mobile: 639px;
         top:50%;
         left:50%;
         transform:translate(-50%, -50%);
-
+        color:#0059ff
        }
     }
 
     &.sect5 {
         display:flex;
         padding:180px 0;
+        background:#fff;
+        color:#000;
         
         .sect_wrap {
             position:relative;
@@ -175,7 +187,8 @@ $mobile: 639px;
 
     &.sect6 {
         text-align:center;
-        padding-bottom:180px;
+        padding:180px 0;
+        
         p {
             font-size:42px;
             text-align:justify;
@@ -216,6 +229,8 @@ $mobile: 639px;
     &.sect8 {
         padding-top: 180px;
         padding-bottom:180px;
+        background:#fff;
+        color:#000;
         .row {
             padding-top:30px;
 
@@ -237,9 +252,12 @@ $mobile: 639px;
         
     }
     &.sect9 {
-        
+        background:#fff;
+        color:#000;
         .sect_wrap {
             width:100%;
+            max-width:100%;
+            padding: 0 40px;
         }
         .motto {
             padding: 100px 60px;

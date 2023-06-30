@@ -18,6 +18,7 @@ a {
 .sect {
   letter-spacing: -0.02em;
   font-size: 16px;
+  color: #fff;
 }
 .sect h2 {
   font-size: 120px;
@@ -46,21 +47,26 @@ a {
   color: #fff;
 }
 .sect.sect1 .sect_wrap {
-  width: 1200px;
+  width: 100%;
+  padding-left: 40px;
+  max-width: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 }
 .sect.sect1 .sect_wrap h2 {
   letter-spacing: 0;
+  font-size: 82px;
 }
 .sect.sect1 .sect_wrap p {
-  font-size: 42px;
+  font-size: 24px;
 }
 .sect.sect2 {
   padding: 180px;
   height: 100vh;
+  background: #ff6c00;
+  color: #000;
 }
 .sect.sect2 .sect_wrap {
   width: 1000px;
@@ -71,6 +77,7 @@ a {
 .sect.sect3 {
   font-size: 72px;
   min-height: 100vh;
+  padding-top: 100px;
   margin-bottom: 180px;
 }
 .sect.sect3 .row {
@@ -104,6 +111,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  background: #000;
 }
 .sect.sect4 .sound {
   font-size: 24vw;
@@ -112,10 +120,13 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #0059ff;
 }
 .sect.sect5 {
   display: flex;
   padding: 180px 0;
+  background: #fff;
+  color: #000;
 }
 .sect.sect5 .sect_wrap {
   position: relative;
@@ -163,7 +174,7 @@ a {
 }
 .sect.sect6 {
   text-align: center;
-  padding-bottom: 180px;
+  padding: 180px 0;
 }
 .sect.sect6 p {
   font-size: 42px;
@@ -197,6 +208,8 @@ a {
 .sect.sect8 {
   padding-top: 180px;
   padding-bottom: 180px;
+  background: #fff;
+  color: #000;
 }
 .sect.sect8 .row {
   padding-top: 30px;
@@ -214,8 +227,14 @@ a {
   font-size: 24px;
   padding-top: 60px;
 }
+.sect.sect9 {
+  background: #fff;
+  color: #000;
+}
 .sect.sect9 .sect_wrap {
   width: 100%;
+  max-width: 100%;
+  padding: 0 40px;
 }
 .sect.sect9 .motto {
   padding: 100px 60px;
@@ -406,15 +425,13 @@ a {
 }
 .sub .sect h2 {
   max-width: 1200px;
-  margin: 200px auto;
+  margin: 200px 40px;
   letter-spacing: -0.03em;
 }
-
-@media screen and (max-width: 1180px) {
-  h2 {
-    padding-left: 2rem;
-  }
+.sub .sect .sect_wrap {
+  max-width: none;
 }
+
 .pop {
   width: 100%;
   height: 100vh;
@@ -454,29 +471,36 @@ a {
   cursor: pointer;
 }
 
-.video .wrap .video-item {
-  display: flex;
-  gap: 30px;
-  padding-bottom: 120px;
+.video .sect h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
-.video .wrap .video-item .pic {
-  width: 50%;
+.video .container {
+  padding-top: 200px;
+  overflow-y: hidden;
+  height: 400px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
-.video .wrap .video-item .txt {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.video .container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
-.video .wrap .video-item h3 {
-  font-size: 42px;
-  padding-bottom: 20px;
+.video .block {
+  position: relative;
+  width: 550px;
+  height: 360px;
+  margin: 0 40px 0 40px;
+  cursor: pointer;
 }
-.video .wrap .video-item span {
-  padding-top: 20px;
-}
-.video .wrap .video-item img {
+.video .block img {
   width: 100%;
+}
+.video .sect9 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  background: #000;
 }
 
 @media screen and (max-width: 1180px) {
@@ -523,7 +547,7 @@ html {
 }
 .vision .searchBox {
   width: 100%;
-  padding: 50px 10px 20px;
+  padding: 50px 40px 20px;
   font-size: 0;
 }
 .vision .searchBox input {
@@ -536,6 +560,7 @@ html {
 .vision .searchBox .btnSearch {
   width: 80px;
   height: 29px;
+  margin-left: 40px;
   background: #333;
   color: #fff;
   font: bold 12px/29px "arial";
@@ -544,6 +569,9 @@ html {
   cursor: pointer;
   margin-left: 5px;
   transform: translateY(-1px);
+}
+.vision .btnSet {
+  padding: 0 40px;
 }
 .vision .loading {
   position: absolute;
@@ -560,6 +588,7 @@ html {
   opacity: 0;
   transform: translateY(100px);
   transition: 1s;
+  margin: 30px;
 }
 .vision .wrap.on {
   opacity: 1;
@@ -606,6 +635,10 @@ html {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+.vision .sect.sect9 .sect_wrap {
+  color: #fff;
+  background: #000;
+}
 
 @media screen and (max-width: 1180px) {
   .vision .wrap li {
@@ -620,9 +653,71 @@ html {
 .about h3 {
   font-size: 42px;
 }
+.about .sect .sect_wrap {
+  width: 100%;
+  padding: 0 40px;
+}
+.about .sect.sect9 {
+  color: #fff;
+  background: #000;
+}
 
+.department .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.department .wrap article {
+  width: 33.3333333333%;
+  float: left;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+.department .wrap article .pic {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+.department .wrap article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.department .wrap article h2 {
+  font: bold 20px/1 "arial";
+  color: #333;
+  margin-bottom: 5px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: #111;
+}
+.department .wrap article p {
+  font: 16px/1 "arial";
+  color: #111;
+}
+
+@media screen and (max-width: 1180px) {
+  .department .inner .wrap article {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .department .inner .wrap article {
+    width: 100%;
+  }
+}
 .sound {
   overflow-y: hidden;
+}
+.sound .cover-bg {
+  width: 100vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(20px);
+  opacity: 0.3;
 }
 .sound #sound {
   display: flex;
@@ -639,57 +734,108 @@ html {
   max-width: 100%;
   height: 100%;
   object-fit: cover;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
 .sound #sound .ui.left a {
   position: absolute;
   bottom: 100px;
   left: 100px;
   color: #fff;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 .sound #sound .ui.left a i {
   padding-right: 10px;
 }
 .sound #sound .ui.right {
-  padding: 140px 0 60px 0;
+  padding: 84px 0 60px 60px;
   max-height: 100vh;
-  width: 75vh;
+  width: calc(100% - 100vh);
+  display: flex;
+  flex-direction: column;
+}
+.sound #sound .ui.right .artist {
+  padding: 40px 0 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+.sound #sound .ui.right .artist li {
+  opacity: 0.2;
+}
+.sound #sound .ui.right .artist li.active {
+  opacity: 1;
 }
 .sound #sound .ui.right h3 {
-  font-size: 42px;
-  padding-bottom: 60px;
-  padding-left: 100px;
+  font-size: 60px;
+  padding-bottom: 31px;
+  opacity: 0.15;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+.sound #sound .ui.right h3.active {
+  opacity: 1;
+  color: #fff;
+  -webkit-text-stroke: transparent;
 }
 .sound #sound .ui.right h6 {
-  padding-left: 100px;
+  padding-left: 80px;
 }
-.sound #sound .ui.right ul {
-  height: 30vh;
+.sound #sound .ui.right .title {
+  display: flex;
+  gap: 100px;
+  padding-top: 41px;
+  padding-bottom: 20px;
+}
+.sound #sound .ui.right .title .title-box {
+  min-width: 380px;
+}
+.sound #sound .ui.right .list {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+}
+.sound #sound .ui.right .list ul {
+  width: calc(100% - 40px);
+  height: 183px;
   overflow-y: scroll;
-  border-bottom: 1px solid #ddd;
+  margin-right: 40px;
+  border-bottom: 1px solid #333;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
-.sound #sound .ui.right ul li {
+.sound #sound .ui.right .list ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.sound #sound .ui.right .list ul li {
   line-height: 60px;
-  border-bottom: 1px solid #ddd;
-  padding-left: 100px;
+  border-bottom: 1px solid #333;
 }
-.sound #sound .ui.right ul li:last-child {
+.sound #sound .ui.right .list ul li.active {
+  color: #fff;
+}
+.sound #sound .ui.right .list ul li:last-child {
   border-bottom: none;
 }
-.sound #sound .ui.right ul li a {
+.sound #sound .ui.right .list ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.sound #sound .ui.right ul li a > * {
+.sound #sound .ui.right .list ul li a > * {
   flex: 1;
 }
-.sound #sound .ui.right ul li a > .songName {
+.sound #sound .ui.right .list ul li a > .songName {
   flex: 5;
 }
 .sound #sound .ui.right .play {
-  padding-left: 100px;
-  padding-top: 60px;
   line-height: 60px;
+  padding-top: 19px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding-left: 60px;
+  padding-bottom: 40px;
+  background: rgba(0, 0, 0, 0.7);
 }
 .sound #sound .ui.right .play .label {
   display: flex;
@@ -699,25 +845,62 @@ html {
   flex: 4;
 }
 .sound #sound .ui.right .play .label .left span {
-  padding-right: 50px;
+  padding-right: 10px;
+}
+.sound #sound .ui.right .play .label .left .songName {
+  font-size: 18px;
 }
 .sound #sound .ui.right .play .label .right {
   flex: 1;
 }
 .sound #sound .ui.right .play .player {
   display: flex;
+  justify-content: space-between;
+  padding-right: 80px;
+}
+.sound #sound .ui.right .play .player .left {
+  display: flex;
   gap: 20px;
 }
-.sound #sound .ui.right .play .player .fa-forward-step {
+.sound #sound .ui.right .play .player .left .fa-forward-step {
   transform: translateX(-2px);
+}
+.sound #sound .ui.right .play .player .center {
+  width: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 7px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.sound #sound .ui.right .play .player .center .line {
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: #fff;
+  position: relative;
+}
+.sound #sound .ui.right .play .player .center .line .indicator {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  right: -7px;
+  top: -7px;
+}
+.sound #sound .ui.right .play .player .right {
+  display: flex;
+  justify-content: flex-start;
 }
 
 body {
   font-family: "Roboto Condensed", sans-serif;
   overflow-x: hidden;
+  background: #000;
 }
 body.sub nav {
-  color: #333;
+  color: #fff;
 }
 
 nav {
@@ -727,7 +910,7 @@ nav {
   line-height: 60px;
   align-items: center;
   position: fixed;
-  top: 20px;
+  top: 10px;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -744,11 +927,40 @@ nav .sect_wrap {
   width: 1200px;
   margin: 0 auto;
 }
+nav a {
+  max-width: 60px;
+}
+nav a img {
+  width: 80px;
+  padding-top: 15px;
+}
 
 @media (max-width: 639px) {
   nav ul {
     display: none;
   }
+}
+.navPop {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #111;
+  font-size: 80px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10vw;
+  display: none;
+}
+.navPop ul {
+  display: flex;
+  gap: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

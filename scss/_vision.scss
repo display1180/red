@@ -8,7 +8,7 @@ html {
 
     .searchBox {
         width: 100%;
-        padding: 50px 10px 20px;
+        padding: 50px 40px 20px;
         font-size: 0;
 
         input {
@@ -21,6 +21,7 @@ html {
         .btnSearch {
             width: 80px;
             height: 29px;
+            margin-left:40px;
             background: #333;
             color: #fff;
             font: bold 12px/29px 'arial';
@@ -30,6 +31,9 @@ html {
             margin-left: 5px;
             transform: translateY(-1px);
         }
+    }
+    .btnSet {
+        padding: 0 40px;
     }
 
     .loading {
@@ -49,6 +53,7 @@ html {
         opacity: 0;
         transform: translateY(100px);
         transition: 1s;
+        margin: 30px;
 
         &.on {
             opacity: 1;
@@ -97,6 +102,15 @@ html {
                     margin-top: 10px;
                     margin-bottom: 20px;
                 }
+            }
+        }
+    }
+
+    .sect {
+        &.sect9 {
+            .sect_wrap {
+                color:#fff;
+                background:#000;
             }
         }
     }

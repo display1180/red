@@ -22,3 +22,13 @@ fetch('./DB/artists.json').then((res)=> {
     console.log(tags);
     artistWrap.innerHTML = tags;
 })
+
+const navOpen = document.querySelector('.hamburger');
+const navPop = document.querySelector('.navPop');
+const close = document.querySelector('.close');
+navOpen.addEventListener('click', ()=> {
+    navPop.style.display = 'block';
+})
+close.addEventListener('click', ()=> {
+    navPop.style.display = 'none';
+})
