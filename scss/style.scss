@@ -16,10 +16,9 @@ $mobile: 639px;
 body {
     font-family: 'Roboto Condensed', sans-serif;
     overflow-x: hidden;
-    background:#000;
 
     &.sub nav {
-        color:#fff;
+        color:#333;
     }
 }
 nav {
@@ -29,7 +28,7 @@ nav {
     line-height:60px;
     align-items:center;
     position:fixed;
-    top:10px;;
+    top:20px;;
     width:100%;
     left:50%;
     transform:translateX(-50%);
@@ -41,19 +40,10 @@ nav {
         display:flex;
         flex-direction:row;
         gap: 20px;
-        
     }
     .sect_wrap {
         width:1200px;
         margin:0 auto;
-    }
-    a {
-        max-width: 60px;
-
-        img {
-            width:80px;
-            padding-top:15px;
-        }
     }
 }
 

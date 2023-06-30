@@ -1,3 +1,4 @@
+
 const wrap = document.querySelector('.video .wrap');
 
 fetchData();
@@ -30,22 +31,23 @@ function createList(arr) {
 		let date = item.snippet.publishedAt;
 
 		tags += `
-		<article>
+        <article class="video-item block">
         <div class='pic'>
-            <img class='thumb' src=${item.snippet.thumbnails.standard.url} alt=${
-			item.snippet.resourceId.videoId
-		} />
+            <img class='thumb' src=${item.snippet.thumbnails.standard.url} alt=${item.snippet.resourceId.videoId} />
           </div> 
-          <h3>${tit.length > 50 ? tit.substr(0, 50) + '...' : tit}</h3>
+          
           <div class='txt'>
+          <h3>${tit.length > 50 ? tit.substr(0, 50) + '...' : tit}</h3>
             <p>${desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>
             <span>${date.split('T')[0].split('-').join('.')}</span>
-          </div> 
-		  </article> 
+          </div>  
+        </article>
       `;
 	});
+
 	wrap.innerHTML = tags;
 }
+
 //동적으로 팝업 생성함수
 function createPop(id) {
 	const tags = `	
@@ -62,9 +64,11 @@ function createPop(id) {
 	setTimeout(() => document.querySelector('.pop').classList.add('on'), 0);
 	document.body.style.overflow = 'hidden';
 }
+
 //팝업제거 함수
 function removePop() {
 	document.querySelector('.pop').classList.remove('on');
 	setTimeout(() => document.querySelector('.pop').remove(), 1000);
 	document.body.style.overflow = 'auto';
 }
+
