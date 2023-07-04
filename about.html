@@ -10,6 +10,27 @@
     <!-- <script defer src="js/main.js"></script> -->
     <!-- <script defer src="js/vision.js"></script> -->
     <script defer src="js/department.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('23g8RepczesqKPoIX');
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // service ID, template ID
+        emailjs.sendForm('service_4wnjvjd', 'template_au1enk7', this)
+          .then(function () {
+            console.log('SUCCESS!');
+          }, function (error) {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script>
 </head>
 <body class="sub about">
     <main>
@@ -25,6 +46,7 @@
                 <li><a href="./sound.html">SOUND</a></li>
                 <li><a href="./vision.html">VISION</a></li>
                 <li><a href="./video.html">VIDEO</a></li>
+                <li><a href="./members.html">MEMBERS</a></li>
                 <li>&nbsp;</li>
                 <li>
                     <a href="#" class="hamburger">
@@ -73,7 +95,25 @@
                 <h3>David Bowie's Berlin Apartment</h3><br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4858.860604596496!2d13.357840959246811!3d52.48944998261937!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8504750900001%3A0x8648cf9317993dba!2sDavid%20Bowie&#39;s%20Berlin%20Apartment!5e0!3m2!1sko!2skr!4v1687326638020!5m2!1sko!2skr" style="border:0;height:400px; width:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            
+            <article class="contact">
+                <form id="contact-form">
+                  <!-- 내부적으로 고유 키값이 넘어가는 폼요소 (수정필요 없음) -->
+                  <input type="hidden" name="contact_number">
+        
+                  <!-- 작성하는 사용자 이름 입력받을 폼 요소 -->
+                  <label>Name</label>
+                  <input type="text" name="user_name">
+                  <label>Email</label>
+        
+                  <!-- 작성하는 사용자의 이메일주소를 입력받을 폼 요소 -->
+                  <input type="email" name="user_email">
+                  <label>Message</label>
+        
+                  <!-- 작성 내용을 입력 받을 폼 요소 -->
+                  <textarea name="message"></textarea>
+                  <input type="submit" value="Send">
+                </form>
+              </article>
         </div>
         <div class="sect sect9">
             <div class="sect_wrap">
@@ -84,5 +124,29 @@
             </div>
         </div>
     </main>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('00CenOqaS897TrdGb');
+        })();
+    </script>
+    
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_s0psv8z', 'template_ops946g', this)
+                    .then(function () {
+                        alert('SUCCESS!');
+                    }, function (error) {
+                        alert('FAILED...', error);
+                    });
+            });
+        }
+        AOS.init();
+    </script>
 </body>
 </html>
