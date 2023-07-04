@@ -21,7 +21,7 @@ fetch('데이터 URL')
 */
 let tags = '';
 
-fetch('/DB/department.json')
+fetch('./DB/department.json')
 	.then((res) => res.json())
 	.then((data) => {
 		const memberData = data.members;
