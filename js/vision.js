@@ -11,10 +11,10 @@ const baseURL = `https://www.flickr.com/services/rest/?format=json&nojsoncallbac
 const method_interest = 'flickr.interestingness.getList';
 const method_user = 'flickr.people.getPhotos';
 const method_search = 'flickr.photos.search';
-const url_interest = `${baseURL}${method_search}&tags=davidbowie`;
+const url_interest = `${baseURL}${method_user}&tags=davidbowie`;
 const url_mine = `${baseURL}${method_user}&user_id=${myId}`;
 
-fecthData(url_interest);
+fecthData(url_mine);
 
 //미션1 - my gallery, interest gallery버튼 클릭시 갤러리 전환
 //미션2 - 프로필영역에서 사용자 아이디 클릭시 해당 사용자 갤러리 전환
@@ -48,7 +48,9 @@ function createList(arr) {
         <li class='item'>
           <div>
             <a href='https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg'>
-              <img class='thumb' src='https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg' />
+              <img class='thumb' src='https://live.staticflickr.com/${item.server}/${item.id}_${
+			item.secret
+		}_m.jpg' />
             </a>
             <p>${item.title === '' ? 'Have a good day!!' : item.title}</p>
 
@@ -90,8 +92,6 @@ function isoLayout() {
 	wrap.classList.add('on');
 	loading.classList.add('off');
 }
-
-
 
 /*
 
