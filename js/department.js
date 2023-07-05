@@ -21,7 +21,7 @@ fetch('데이터 URL')
 */
 let tags = '';
 
-fetch('./DB/department.json')
+fetch('/DB/department.json')
 	.then((res) => res.json())
 	.then((data) => {
 		const memberData = data.members;
@@ -30,7 +30,7 @@ fetch('./DB/department.json')
 			tags += `
         <article>
           <div class='pic'>
-            <img src='./img/${data.pic}' />
+            <img src='img/${data.pic}' />
           </div>
           <h2>${data.name}</h2>
           <p>${data.position}</p>

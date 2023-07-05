@@ -48,16 +48,11 @@ function createList(arr) {
         <li class='item'>
           <div>
             <a href='https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg'>
-              <img class='thumb' src='https://live.staticflickr.com/${item.server}/${item.id}_${
-			item.secret
-		}_m.jpg' />
+              <img class='thumb' src='https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg' />
             </a>
-            <p>${item.title === '' ? 'Have a good day!!' : item.title}</p>
+            
 
-						<article class='profile'>	
-							<img src='http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg' />				
-							<span>${item.owner}</span>
-						</article>
+						
           </div>
         </li>
       `;
@@ -113,3 +108,10 @@ function moveScroll(idx) {
 	});
 }
 */
+/**
+ * 
+ * <article class='profile'>	
+							<img src='http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg' />				
+							<span>${item.owner}</span>
+						</article>
+ */
