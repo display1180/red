@@ -91,14 +91,14 @@
        
         <div class="sect sect_cover">
                 <div class="imgs">
-                    <img src="img/db-s3-low.jpg" alt="LOW">
-                    <img src="img/db-s3-heroes.webp" alt="HEROES">
-                    <img src="img/db-s3-lodger.jpg" alt="LODGER">
+                    <img class="img1" src="img/db-s3-low.jpg" alt="LOW">
+                    <img class="img2" src="img/db-s3-heroes.webp" alt="HEROES">
+                    <img class="img3" src="img/db-s3-lodger.jpg" alt="LODGER">
                 </div>
                 <ul class="txt">
-                    <li class="active"><h3 href="#">LOW <span>1977</span></h3> <a href="#">PLAY</a></li>
-                    <li><h3 href="#">HEROES <span>1977</span></h3> <a href="#">PLAY</a></li>
-                    <li><h3 href="#">LODGER <span>1979</span></h3> <a href="#">PLAY</a></li>
+                    <li  class="active txt1"><h3 href="#">LOW <span>1977</span></h3> <a href="#">PLAY</a></li>
+                    <li class="txt2"><h3 href="#">HEROES <span>1977</span></h3> <a href="#">PLAY</a></li>
+                    <li class="txt3"><h3 href="#">LODGER <span>1979</span></h3> <a href="#">PLAY</a></li>
                 </ul>
             
         </div>
@@ -230,8 +230,8 @@ like a definition of pop to me.<br>
     }
     .sect_cover .imgs {
         position : relative;
-        width:1000px;
-        top: 25vh;
+        width:700px;
+        top:25vh;
         margin:0 auto;
     }
     .sect_cover .imgs img {
@@ -240,17 +240,62 @@ like a definition of pop to me.<br>
         top:0;
         left:0;
     }
+    .sect_cover .firstImgAnimation {
+        
+    }
     .sect_cover .txt {
         position:absolute;
         top:75%;
         left: 15%;
         transform:translateX(-50%);
+        z-index:4;
+        text-align:left;
+        display:flex;
+        justify-content:left;
     }
     .sect_cover .txt li {
-        display:none;
+        opacity:0;
+        text-align:left;
+        transition:1s all;
+        position:absolute;
+        top:75%;
+        left: 15%;
+        transform:translateX(-50%);
+        z-index:4;
+        width:50px;
+        white-space:nowrap;
+    }
+    .sect_cover img {
+        transition: 1s all;
     }
     .sect_cover .txt li.active {
         display:block;
+        opacity:1;
+    }
+    .sect_cover .img1 {
+        
+        z-index: 1;
+        transform:translateY(600px);
+        
+    }
+    .sect_cover .img1.firstImgAnimation {
+        transform:rotate(9deg) translateY(0);
+    }
+    .sect_cover .img2 {
+        
+        z-index: 2;
+        transform: translateY(600px);
+    }
+    .sect_cover .img2.secondImgAnimation {
+        transform:translateY(20px) rotate(0deg);
+    }
+    .sect_cover .img3 {
+        
+        z-index: 3;
+        transform: translateY(600px);
+    }
+    .sect_cover .img3.thridImgAnimation {
+        transform:translateY(40px) rotate(-7deg);
     }
    
     .sect_cover .txt h3 {
@@ -258,6 +303,11 @@ like a definition of pop to me.<br>
     }
     .sect_cover .txt span {
         font-size: 24px;
+    }
+    .sect_cover .imgAnimationComplete {
+        transform: translateY(-20%) rotate(0) scale(0.8) !important;
+        
+        
     }
 </style>
 </body>
