@@ -1,0 +1,13 @@
+import { useRef, useState } from 'react';
+
+export const useDebounce = (value) => {
+	const [DebouncedVal, setDebouncedVal] = useState(value);
+	const eventBlocker = useRef(null);
+
+	clearTimeout(eventBlocker.current);
+	eventBlocker.current = setTimeout(() => {
+		setDebouncedVal(val);
+	}, 400);
+
+	return DebouncedVal;
+};
