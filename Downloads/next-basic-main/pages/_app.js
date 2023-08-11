@@ -1,7 +1,12 @@
 import '@/styles/globals.scss';
+import { GlobalProvider } from '../hooks/useGlobalContext';
 
 export default function App({ Component, pageProps }) {
-	return <Component {...pageProps} />;
+	return (
+		<GlobalProvider>
+			<Component {...pageProps} />;
+		</GlobalProvider>
+	);
 }
 
 /*
