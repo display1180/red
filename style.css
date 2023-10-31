@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+html {font-family: 'outfit', 'Pretendard-Regular', sans-serif; 
+    color:#333;
+    font-size: 16px;
+    color:#315c7b;
+    background:#f8f8f8;
+    word-break:keep-all;
+}
+* {margin:0;    padding:0;    box-sizing:border-box;}
+ul, li {list-style:none;}
+a {text-decoration:none; color:inherit;}
+.row::after, dl::after {
+    clear:both;
+    content:'';
+    display:block;
+}
+.col {float:left}
+.sixth > .col {width:12.5%;}
+dt, dd {float:left;}
+
+header {padding: 30px 50px; display:flex; justify-content:space-between;}
+header h1 {width: 100px;}
+header ul {display:flex;  gap: 40px;}
+footer {text-align:center;font-size: 12px; opacity:0.5; padding:30px;}
+.category {margin:0 auto; width: fit-content; padding-bottom: 60px;}
+.category ul {display:flex; gap: 30px;}
+.category ul li  {opacity:0.5;}
+.category ul .active {font-weight:600;opacity:1;}
+
+.index {height:100vh; background:url(./imgs/vizzart_main.jpg) no-repeat center bottom #ebe1d8; text-align:center;}
+.index footer {position:absolute; bottom:0;width:100%;}
+.index main h2 {font-size: 180px;text-align:center;}
+
+.index main  p { text-align:center; font-size: 20px;line-height:1.3em;font-weight:600;margin-bottom:-20px; }
+.index main span {opacity:0.5;}
+.index main p b {opacity:1;}
+.index main a {display:inline-block; border-radius:50px; padding: 14px 28px; font-weight: 600; border: 2px solid #315c7b;font-size: 22px;margin:0 auto;}
+.product {background:#f8f8f8;}
+.product .top {display:flex; flex-direction:row; padding-bottom:60px;}
+.product .top > div{width:50%;}
+.product .top .thumb {}
+.product .title {padding-left: 60px;}
+.product .title h2 {font-size: 42px;}
+.product .colors {padding: 20px 0;}
+.product .title .active {font-weight: 700;}
+.product .size {display:flex; gap: 30px;}
+.product .thumb {width: 500px; height:500px; display:flex;}
+.product .thumb img {object-fit:contain; background: #fff; width:100%;}
+.colors {display:flex; align-items:center; gap: 10px;}
+.colors .point {width: 30px; height:30px; background:teal; display:block; border-radius:50px;}
+.colors .txt {padding-right: 10px;}
+
+.product .contents {max-width:1200px; margin: 0 auto;}
+.product .contents .product-detail img { width:100%;}
+
+.product .product-list { display:flex; gap: 20px;flex-wrap:wrap;}
+.product .product-list li {width: 30%;padding-bottom:100px;}
+.product .product-list .thumb {width:100%; height:100%;}
+.product .product-list span {font-size: 14px; padding: 0px; display:block; padding-top: 20px;}
+.product .product-list p {font-size: 24px; font-weight:bold; padding:0 0px;}
+
+
+/* coating */
+.coating {color:#fff; line-height:1.8em;}
+.coating .sect-wrap {backdrop-filter: blur(5px) brightness(0.3); padding-bottom: 60px;}
+.coating-back {background:url(http://visionart.kr/kor/images/silversky-upper.jpg) no-repeat center center / cover ; width:100%; height:100vh; position:fixed;top:0;left:0; z-index:-1;}
+.coat .content {background:url(../images/ct-bg-01.jpg) no-repeat center; background-size:cover; width:100vw; max-width:100%; }
+.coat .content .row {max-width:1200px; margin:0 auto; position:relative;  padding: 100px 0 30px; }
+.coat .content h6 {color:#e00032; font-weight:500;}
+.coat .content h3 {padding:0.3rem 0 1rem 0;}
+.coat .sfc {position:absolute; left:-540px; top: 10px;}
+.coat .sfc .sfc-dsc {position:absolute; left:525px; top:115px; }
+.coat .dsc {float:right;}
+.coat .dsc ul li {color:#ddd; padding-bottom:0.5rem; font-weight:300}
+.coat .content#ceramic b {display:block; padding: 10px 0;}
+.coat .content ul.sfc-dsc {opacity:0;}
+.coat .slice {padding-top: 80px; }
+.coat .slice h5 {padding-bottom:20px;color:#e00032;}
+.coat .content .sfc-logo {position:absolute; right:75px; bottom:37px;}
+.coating .category {padding-bottom: 50vh;}
+
+.coating .content {position : relative; padding-bottom: 80px;}
+.content h4 {position:absolute; left:calc(50% - 600px); top:00px;z-index: 1; padding-top: 50px;}
+.content iframe {position:absolute; left:0; top:0; }
+.coating .certs {margin-bottom:5rem; padding-top: 60px;position:relative }
+
+
+.coating .content {background-image: none;; position:relative; padding-bottom: 20px;}
+.coating h4 {padding-top:90px;font-size:32px;}
+.coating h5 {padding:0; margin-top:10px;font-weight:700;}
+.coating .coating-img {margin:0 auto; display:block;}
+.coating .slice .row img.cert-t {max-width:720px; padding-top: 40px; padding-left: 30px;}
+.coating .surface li {width:60%; padding-bottom: 10px; font-size: 18px;}
+
+.coat .coat-icon {float:right;padding: 15px;  max-width: 260px; width:100%; text-align:center; margin-top: 50px; margin-bottom:20px;margin-right: 60px; background:#e5e5e5;}
+.coat .coat-icon img{ max-width:100%; width:100%;margin:0 auto;}
+.coating .img-dsc { position:absolute;  left:65%; top: 37%;}
+.coating .surface {position:relative;}
+.coating .surface img {position:absolute; right:0; top:-100px;}
+.coating .surface .logo {position:absolute; top: 150px;right:-40px;max-width:220px;}
+.coating  h5 {padding-top: 20px; padding-bottom:30px; font-size: 32px;color:#e00032}
+.coating  table {margin-bottom: 5rem;}
+.coating table tr:first-child th {background:#333; color:#fff; width: 14.27%;}
+
+.coating .certs img {border:1px solid #ccc;width:90%; margin-right:20px;}
+.coating .certs p {position:absolute; right:0 ; bottom:0; font-size: 32px; font-weight: 600; color:#ff87a2; line-height:1.6em;}
+
+.coating img {width:auto;}
+.coating main, .howto main {max-width:1200px; margin: 0 auto;}
+/* FAQ */
+
+
+#faq .inq dl:nth-of-type(1) {border-top: 2px solid #333;  }
+#faq .inq dt, #faq .inq dd {width:100%; float:none; line-height: 1em; padding: 1.5rem;}
+#faq .inq dt {font-size: 1.125rem; font-weight:500; padding-top: 1.5rem; border-bottom: 1px solid #ddd;background:url(../images/morearrow_white_bottom.jpg) no-repeat 98% center; cursor:pointer;}
+#faq .inq dd {color:#666; display:none; border-bottom: 1px solid #ddd; background:#f8f8f8; line-height: 1.8em;}
+#faq .inq dl b {display:inline-block; margin-right: 1rem; font-size: 1.125rem;}
+
+.howto h2 {font-size: 45px;}
+
+#as .row {background:white;}
+#as .col {padding-bottom: 30px; }
+#as .col .big {display:inline-block; padding-right:30px; font-size:28px; float:left; margin-bottom: 20px;;}
+#as .inq {border-top: 2px solid #333;}
+#as .inq dl {line-height: 40px; padding: 20px; border-bottom: 1px solid #ddd; font-size:16px; }
+#as .inq dt {font-weight:600; color:#e00032; padding-right: 2rem; font-size: 20px;}
+#as .inq dd b {}
+#as .inq span {font-size: 14px; color:#999; margin-bottom: 20px; display:block;}
+#as .inq table {padding-left: 60px; margin-top:50px; font-size: 16px;}
+#as .inq .as-last {padding-bottom: 30px;}
+#as .inq .as-last .f-left {width:30%;}
+#as .inq .as-last .f-right {padding: 30px; padding-top: 60px;width:68%;}
+table{width:100%;}
+table th{padding: 20px; border: 1px solid #ddd; background-color: #eee; font-weight: 400; color: #333;}
+table td{padding: 20px; border: 1px solid #ddd; color: #666; line-height:1.6em; text-align:center;}
